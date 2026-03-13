@@ -8,6 +8,7 @@ export default class Cl_vEmpresa {
   lblPromedioAdministrativos: HTMLElement;
   lblTotalObreros: HTMLElement;
   lblTotalAdministrativos: HTMLElement;
+  lblRegistrosProcesados: HTMLElement;
 
 
   constructor() {
@@ -27,13 +28,17 @@ export default class Cl_vEmpresa {
     this.lblTotalAdministrativos = document.getElementById(
       "body_lblTotalAdministrativos",
     ) as HTMLElement;
+    this.lblRegistrosProcesados = document.getElementById(
+      "body_lblRegistrosProcesados",
+    ) as HTMLElement;
   }
 
   reportar({ empresa, personal }: { empresa: Cl_mEmpresa, personal: Cl_mPersonal }): void {
 
     this.lblPromedioObreros!.innerHTML = `${empresa.PromedioObreros}`;
     this.lblPromedioAdministrativos!.innerHTML = `${empresa.PromedioAdministrativos}`;
-     this.lblTotalObreros!.innerHTML = `${empresa.totalobreros}`;
-      this.lblTotalAdministrativos!.innerHTML = `${empresa.totalAdministrativos}`;
+    this.lblTotalObreros!.innerHTML = `${empresa.totalobreros}`;
+    this.lblTotalAdministrativos!.innerHTML = `${empresa.totalAdministrativos}`;
+    this.lblRegistrosProcesados!.innerHTML = `${empresa.registrosProcesados}`;
   }
 }

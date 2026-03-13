@@ -25,5 +25,8 @@ export default class Cl_mEmpresa {
     get totalAdministrativos() {
         return this.acAdministrativos;
     }
+    get registrosProcesados() {
+        return this.cntObreros + this.cntAdministrativos;
+    }
 }
 //# sourceMappingURL=Cl_mEmpresa.js.map

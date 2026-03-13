@@ -28,4 +28,7 @@ export default class Cl_mEmpresa {
   get totalAdministrativos(): number {
     return this.acAdministrativos;
   }
+  get registrosProcesados(): number {
+    return this.cntObreros + this.cntAdministrativos;
+  }
 }
